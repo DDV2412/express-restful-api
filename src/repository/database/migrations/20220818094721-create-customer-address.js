@@ -1,0 +1,61 @@
+"use strict";
+module.exports = {
+  async up(queryInterface, Sequelize) {
+    await queryInterface.createTable("Customer_addresses", {
+      id: {
+        allowNull: false,
+        defaultValue: Sequelize.UUIDV4,
+        primaryKey: true,
+        type: Sequelize.UUID,
+      },
+      customer_id: {
+        type: Sequelize.UUID,
+        allowNull: false,
+        references: {
+          model: {
+            tableName: "Users",
+          },
+          key: "id",
+        },
+        onDelete: "cascade",
+        onUpdate: "cascade",
+      },
+      city: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      districts: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      sub_districts: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      detail_address: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      zip_code: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+      },
+      status: {
+        type: Sequelize.ENUM("default", "office", "store"),
+        allowNull: false,
+        defaultValue: "default",
+      },
+      createdAt: {
+        allowNull: false,
+        type: Sequelize.DATE,
+      },
+      updatedAt: {
+        allowNull: false,
+        type: Sequelize.DATE,
+      },
+    });
+  },
+  async down(queryInterface, Sequelize) {
+    await queryInterface.dropTable("Customer_addresses");
+  },
+};
