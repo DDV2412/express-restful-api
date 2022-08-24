@@ -10,23 +10,25 @@
 
 - Register pelanggan baru
 
-http://localhost:3000/api/v1/auth/register
+http://127.0.0.1:3000/api/auth/register
 
 - Login pelanggan
 
-http://localhost:3000/api/v1/auth/login
+http://127.0.0.1:3000/api/auth/login
 
 - Menampilkan data item
 
-http://localhost:3000/api/v1/get-products
+http://127.0.0.1:3000/api/product
 
 - Membuat pesanan baru
 
-http://localhost:3000/api/v1/customer/checkout/:product_id
+http://127.0.0.1:3000/api/customer/checkout/:product_id
 
 - Memperbarui status pesanan
 
-http://localhost:3000/api/v1/admin/update/status_order/:checkout_id
+http://127.0.0.1:3000/api/seller/order/:checkout_id
+
+http://127.0.0.1:3000/api/admin/checkout/:checkout_id
 
 ## ERD
 
