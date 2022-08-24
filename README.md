@@ -30,4 +30,4 @@ http://localhost:3000/api/v1/admin/update/status_order/:checkout_id
 
 ## ERD
 
-![alt text](https://github.com/DDV2412/challenge_bootcamp/blob/master/ERD%20Plus.png?raw=true)
+![alt text](https://github.com/DDV2412/gold_challenge/blob/master/ERD%20Plus.png?raw=true)
